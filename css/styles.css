@@ -285,7 +285,9 @@ img {
   left: 50%;
   transform: translate(-50%, -50%);
   width: 528px;
-  height: 581px;
+  min-height: 581px;
+  padding: 40px;
+
   border-radius: 4px;
   transition: transform var(--duration) var(--timing-function);
   background-color: var(--bgc-white-color);
@@ -296,10 +298,17 @@ img {
 .modal-form {
   display: flex;
   flex-direction: column;
-  padding: 40px;
 }
 
-.modal-form > h2 {
+.modal-form label {
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.01em;
+
+  color: var(--text-main-color);
+}
+
+.modal-form > p {
   margin-bottom: 12px;
 
   font-weight: 700;
@@ -313,14 +322,12 @@ img {
 
 .modal-form-inputs {
   width: 100%;
-  margin-bottom: 10px;
   padding: 11px 0 11px 42px;
   cursor: pointer;
   transition: border-color var(--duration) var(--timing-function);
 
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
-  /* border-color: black; */
 }
 
 .modal-form-inputs:focus {
@@ -333,6 +340,7 @@ img {
 
 .input-wrap {
   position: relative;
+  margin-bottom: 10px;
 }
 
 .icon-input {
@@ -340,16 +348,20 @@ img {
   top: 50%;
   left: 12px;
   display: inline-block;
-  width: 32px;
-  height: 32px;
+  width: 18px;
+  height: 18px;
   transition: fill var(--duration) var(--timing-function);
 }
 
-.modal-form-textarea {
+.textarea-wrap {
   margin-bottom: 20px;
+}
+
+.modal-form-textarea {
   padding: 11px 0 11px 12px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
+  resize: none;
 }
 
 .modal-form > label {
@@ -371,6 +383,7 @@ img {
 
 .modal-checkbox-text {
   margin-left: 24px;
+  margin-bottom: 0;
   font-size: 14px;
   line-height: 1.71;
 
@@ -404,9 +417,27 @@ img {
   border-color: transparent;
 }
 
-.modal-input-btn {
-  display: block;
+.input-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  height: 50px;
+  border-radius: 4px;
+  padding: 10px 29px;
   margin: 0 auto;
+  cursor: pointer;
+
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.88;
+  text-align: center;
+  letter-spacing: 0.06em;
+  transition: box-shadow var(--duration) var(--timing-function);
+
+  color: var(--bgc-white-color);
+  background: var(--text-acent-color);
+  border-color: transparent;
 }
 
 .modal-btn {
@@ -414,6 +445,7 @@ img {
   top: 8px;
   right: 8px;
   display: inline-block;
+
   height: 30px;
   width: 30px;
   border: 1px solid rgba(0, 0, 0, 0.1);
@@ -721,28 +753,8 @@ footer .soc-icon {
   color: rgba(255, 255, 255, 0.6);
 }
 
-.input-btn {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 200px;
-  height: 50px;
-  border-radius: 4px;
-  padding: 10px 29px;
+.input-footer-wrap .input-btn {
   margin-left: 12px;
-  cursor: pointer;
-
-  font-family: 'Roboto';
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 1.88;
-  text-align: center;
-  letter-spacing: 0.06em;
-  transition: box-shadow var(--duration) var(--timing-function);
-
-  color: var(--bgc-white-color);
-  background: var(--text-acent-color);
-  border-color: transparent;
 }
 
 .input-btn:hover,

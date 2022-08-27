@@ -387,8 +387,8 @@
               <use href="./images/symbol-defs.svg#icon-cross"></use>
             </svg>
           </button>
-          <form action="" class="modal-form">
-            <h2>Оставьте свои данные, мы вам перезвоним</h2>
+          <form class="modal-form">
+            <p>Оставьте свои данные, мы вам перезвоним</p>
 
             <div class="input-wrap">
               <label for="user-name">Имя</label>
@@ -414,14 +414,17 @@
               </svg>
             </div>
 
-            <label for="comments">Комментарий</label>
-            <textarea
-              name="comments"
-              id="comments"
-              rows="6"
-              placeholder="Введите текст"
-              class="modal-form-textarea modal-form-inputs"
-            ></textarea>
+            <div class="textarea-wrap">
+              <label for="comments">Комментарий</label>
+              <textarea
+                name="comments"
+                id="comments"
+                rows="6"
+                placeholder="Введите текст"
+                class="modal-form-textarea modal-form-inputs"
+              >
+              </textarea>
+            </div>
 
             <div class="modal-checkbox-wrap">
               <input
@@ -469,7 +472,7 @@
           </address>
         </div>
         <div class="soc-icon-wrap">
-          <h2 class="title-footer">присоединяйтесь</h2>
+          <p class="title-footer">присоединяйтесь</p>
           <ul class="team-soc-list list">
             <li class="team-soc-item">
               <a href="" class="team-soc-link link">
@@ -501,10 +504,10 @@
             </li>
           </ul>
         </div>
-        <form action="" class="input-footer">
+        <form class="input-footer">
           <h2 class="title-footer">Подпишитесь на рассылку</h2>
           <div class="input-footer-wrap">
-            <label for="mail" name="mail"></label>
+            <label for="mail"></label>
             <input type="email" name="mail" id="mail" placeholder="E-mail" />
             <button type="submit" class="input-btn">
               Подписаться
